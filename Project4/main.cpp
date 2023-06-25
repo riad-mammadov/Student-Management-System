@@ -14,7 +14,7 @@ class student {
 public:
 	void calculateAverage();
 	void getData();
-	void studentNumber();
+	int studentNumber() const;
 	void showData() const;
 };
 
@@ -60,6 +60,11 @@ void student::showData() const {
 	std::cout << "Science Mark: " << scim << std::endl;
 	std::cout << "Computer Science Mark: " << compscim << std::endl;
 
+}
+
+ int student::studentNumber() const {
+
+	 return studentN;
 }
 
 int main() {
