@@ -68,15 +68,42 @@ void student::showData() const {
 }
 
  void create_student();
- void display_records();
- void delete_student();
- void change_student();
+ void display_records(int);
+ void delete_student(int);
+ void change_student(int);
+ 
 
-int main() {
-	char choice;
-	int num;
-	system("cls");
+ int main() {
+	 char choice;
+	 int num;
+	 system("cls");
+	 do {
+		 std::cout << "\n\n\n\tRECORD MENU";
+		 std::cout << "\n\n\t1.Create student record";
+		 std::cout << "\n\n\t2. Search student record";
+		 std::cout << "\n\n\t3. Display all students records";
+		 std::cout << "\n\n\t4.Delete student record";
+		 std::cout << "\n\n\t5.Modify student record";
+		 std::cout << "\n\n\t6.Exit";
+		 std::cout << "\n\n Select 1-6";
+		 std::cin >> choice;
+		 system("cls");
+		 switch (choice)
+		 {
+		 case '1': create_student(); break;
+		 case '2': std::cout << "\n\n\tEnter student number: ";
+			 std::cin >> num;
+		 case '3': display_records(num); break;
+		 case '4': std::cout << "\n\n\tEnter student number: ";
+			 std::cin >> num;
+			 delete_student(num); break;
+		 case '5': std::cout << "\n\n\tEnter student number: ";
+			 std::cin >> num;
+			 change_student(num); break;
+		 case '6': std::cout << "Exitting."; exit(0);
 
+		 }
+	 }
 
+ }
 
-}
