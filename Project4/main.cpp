@@ -12,10 +12,10 @@ class student {
 	double average;
 	char grade;
 public:
-	void calculateAverage();
-	void getData();
-	int studentNumber() const;
-	void showData() const;
+	void calculateAverage(); // Average of grades
+	void getData(); // Gets data of students
+	int studentNumber() const; // returns student number
+	void showData() const; // shows student record
 };
 
 void student::calculateAverage() {
@@ -67,7 +67,16 @@ void student::showData() const {
 	 return studentN;
 }
 
+ void create_student();
+ void display_records();
+ void delete_student();
+ void change_student();
+
 int main() {
+	char choice;
+	int num;
+	system("cls");
+
 
 
 }
