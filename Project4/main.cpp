@@ -27,7 +27,7 @@ void student::calculateAverage() {
 		grade = 'B';
 	if (average >= 55)
 		grade = 'C';
-}
+} 
 
 int main() {
 
